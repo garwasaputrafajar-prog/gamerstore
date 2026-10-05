@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GamerStore – Akun Mobile Legends &amp; Free Fire</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f4fb;--panel:#fff;--ink:#1a1230;--mute:#5e567a;--line:#ddd6ee;--pink:#e0246a;--amber:#b86e00;--onpink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150e28;--panel:#211a3d;--ink:#f3eefc;--mute:#b0a6cf;--line:#372e5c;--pink:#ff4d8d;--amber:#ffc247;--onpink:#1a0a14}}
+:root[data-theme="dark"]{--bg:#150e28;--panel:#211a3d;--ink:#f3eefc;--mute:#b0a6cf;--line:#372e5c;--pink:#ff4d8d;--amber:#ffc247;--onpink:#1a0a14}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo b{color:var(--pink)}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--pink);color:var(--onpink);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:10px;border:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--mute);max-width:46ch;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.listing{background:var(--panel);border:1.5px solid var(--line);border-radius:18px;padding:22px;transform:rotate(2deg);box-shadow:8px 8px 0 var(--pink)}
+.listing .top{display:flex;justify-content:space-between;font-size:14px;color:var(--mute)}
+.listing h3{font-size:24px;margin:14px 0 4px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.tags span{font-size:13px;border:1px solid var(--line);border-radius:6px;padding:3px 10px}
+.price{font:800 30px "Bricolage Grotesque",sans-serif}
+.safe{margin-top:14px;padding:10px 14px;border-radius:10px;background:var(--bg);font-size:14px;color:var(--amber);font-weight:500}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 36px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.item h3{font-size:20px;margin-bottom:6px}
+.item p{margin:0;color:var(--mute);font-size:16px}
+.steps{counter-reset:s;display:grid;gap:0;max-width:720px}
+.step{display:grid;grid-template-columns:52px 1fr;padding:20px 0;border-bottom:1px solid var(--line)}
+.step:before{counter-increment:s;content:counter(s);font:800 32px "Bricolage Grotesque",sans-serif;color:var(--pink)}
+.step h3{font-size:20px}.step p{margin:4px 0 0;color:var(--mute)}
+.cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card small{color:var(--mute)}.card .price{font-size:22px;margin-top:10px}
+details{border-bottom:1px solid var(--line);padding:16px 0;max-width:720px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--mute);margin:10px 0 0}
+.contact{background:var(--panel);border:1.5px solid var(--line);border-radius:18px;padding:36px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.contact ul{list-style:none;padding:0;margin:0;color:var(--mute)}
+footer{padding:28px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}nav{display:none}.listing{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#">Gamer<b>Store</b></a>
+  <nav><a href="#layanan">Layanan</a><a href="#cara">Cara kerja</a><a href="#akun">Akun</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Akun Mobile Legends dan Free Fire, jual beli langsung.</h1>
+    <p>Toko kecil yang menjual akun Mobile Legends dan Free Fire, semua di bawah Rp 400.000. Detail akun kami tulis apa adanya. Transaksi COD: kita ketemu langsung, kamu cek akunnya, baru bayar.</p>
+    <div class="cta"><a class="btn" href="#akun">Lihat akun</a><a class="btn ghost" href="#kontak">Tanya lewat chat</a></div>
+  </div>
+  <div class="listing" aria-label="Contoh tampilan listing akun">
+    <div class="top"><span>Contoh listing #A-0127</span><span>Terverifikasi</span></div>
+    <h3>Akun Mobile Legends</h3>
+    <div>Rank Epic · 60 hero · 30 skin</div>
+    <div class="tags"><span>Email ganti</span><span>Bebas banned</span><span>Garansi 7 hari</span></div>
+    <div class="price">Rp 350.000</div>
+    <div class="safe">COD: cek akun dulu, baru bayar.</div>
+  </div>
+</div>
+</div>
+
+<div class="wrap">
+<section id="layanan">
+  <h2>Yang kami jual</h2>
+  <p class="lead">Dua game saja, supaya kami paham betul akun yang dijual.</p>
+  <div class="grid">
+    <div class="item"><h3>Akun Mobile Legends</h3><p>Dari akun rank Epic sampai Mythic, lengkap dengan jumlah hero dan skin.</p></div>
+    <div class="item"><h3>Akun Free Fire</h3><p>Akun dengan bundle, karakter, dan senjata evo yang sudah kami cek.</p></div>
+    <div class="item"><h3>Bantu serah terima</h3><p>Kami arahkan cara ganti email, nomor, dan password sampai akun sepenuhnya milikmu.</p></div>
+    <div class="item"><h3>Bayar di tempat (COD)</h3><p>Ketemu langsung, cek akun bersama, baru bayar tunai. Tidak perlu transfer di depan.</p></div>
+  </div>
+</section>
+
+<section id="cara">
+  <h2>Cara beli</h2>
+  <p class="lead">Empat langkah, tidak ribet.</p>
+  <div class="steps">
+    <div class="step"><div><h3>Pilih akun dan chat kami</h3><p>Lihat daftar akun, lalu tanya detail atau minta foto tambahan.</p></div></div>
+    <div class="step"><div><h3>Sepakati harga dan tempat</h3><p>Tentukan titik ketemu di tempat ramai dan waktu yang cocok untuk kita berdua.</p></div></div>
+    <div class="step"><div><h3>Ketemu dan cek akun</h3><p>Login bersama, periksa rank, hero, skin, dan status akun sebelum bayar.</p></div></div>
+    <div class="step"><div><h3>Bayar dan ganti data</h3><p>Kalau cocok, bayar tunai. Saat itu juga kamu ganti email dan password.</p></div></div>
+  </div>
+</section>
+
+<section id="akun">
+  <h2>Contoh akun tersedia</h2>
+  <p class="lead">Contoh tampilan. Ganti dengan akun yang benar-benar kamu jual.</p>
+  <div class="cards">
+    <div class="card"><small>Mobile Legends</small><h3>Epic, 60 hero</h3><p class="item">Email bisa diganti · bebas banned</p><div class="price">Rp 350.000</div></div>
+    <div class="card"><small>Mobile Legends</small><h3>Grandmaster, 40 hero</h3><p class="item">Ada beberapa skin Epic</p><div class="price">Rp 180.000</div></div>
+    <div class="card"><small>Free Fire</small><h3>Level 60, 8 bundle</h3><p class="item">Ada senjata evo dan beberapa karakter</p><div class="price">Rp 250.000</div></div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>Pertanyaan umum</h2>
+  <details><summary>Apakah akun bisa diambil balik?</summary><p>Akun diserahkan dengan ganti email dan nomor, jadi kendali penuh ada di kamu. Kalau ada masalah, langsung kabari kami lewat chat.</p></details>
+  <details><summary>Ada biaya tambahan?</summary><p>Harga sesuai yang tertulis, semua di bawah Rp 400.000. Tidak ada biaya admin.</p></details>
+  <details><summary>Di mana COD-nya?</summary><p>Di tempat ramai yang kita sepakati lewat chat, misalnya kafe atau pusat perbelanjaan. Area COD tertera di bagian kontak.</p></details>
+  <details><summary>Bayarnya bagaimana?</summary><p>Tunai saat akun sudah kamu cek dan cocok. Tidak ada pembayaran di muka.</p></details>
+  <details><summary>Bagaimana jika akun ternyata bermasalah?</summary><p>Hubungi kami secepatnya dengan bukti. Kami bantu cari solusinya.</p></details>
+</section>
+
+<section id="kontak">
+  <div class="contact">
+    <div><h2>Tertarik? Chat saja</h2>
+    <ul><li>Area COD: (isi kota atau kawasan kamu)</li><li>WhatsApp: 08xx-xxxx-xxxx</li><li>Instagram: @gamerstore</li><li>Email: halo@gamerstore.id</li></ul></div>
+    <a class="btn" href="#">Chat di WhatsApp</a>
+  </div>
+</section>
+</div>
+
+<div class="wrap"><footer>© 2026 GamerStore. Semua merek game adalah milik pemegang haknya masing-masing.</footer></div>
+</body>
+</html>
