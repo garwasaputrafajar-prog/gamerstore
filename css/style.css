@@ -1,0 +1,94 @@
+:root{--bg:#f7f4fb;--panel:#fff;--ink:#1a1230;--mute:#5e567a;--line:#ddd6ee;--pink:#e0246a;--amber:#b86e00;--onpink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150e28;--panel:#211a3d;--ink:#f3eefc;--mute:#b0a6cf;--line:#372e5c;--pink:#ff4d8d;--amber:#ffc247;--onpink:#1a0a14}}
+:root[data-theme="dark"]{--bg:#150e28;--panel:#211a3d;--ink:#f3eefc;--mute:#b0a6cf;--line:#372e5c;--pink:#ff4d8d;--amber:#ffc247;--onpink:#1a0a14}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo b{color:var(--pink)}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--pink);color:var(--onpink);font-weight:700;text-decoration:none;padding:14px 26px;border-radius:10px;border:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--mute);max-width:46ch;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.price{font:800 30px "Bricolage Grotesque",sans-serif}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 36px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.item h3{font-size:20px;margin-bottom:6px}
+.item p{margin:0;color:var(--mute);font-size:16px}
+.steps{counter-reset:s;display:grid;gap:0;max-width:720px}
+.step{display:grid;grid-template-columns:52px 1fr;padding:20px 0;border-bottom:1px solid var(--line)}
+.step:before{counter-increment:s;content:counter(s);font:800 32px "Bricolage Grotesque",sans-serif;color:var(--pink)}
+.step h3{font-size:20px}.step p{margin:4px 0 0;color:var(--mute)}
+.cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card small{color:var(--mute)}.card .price{font-size:22px;margin-top:10px}
+details{border-bottom:1px solid var(--line);padding:16px 0;max-width:720px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--mute);margin:10px 0 0}
+.contact{background:var(--panel);border:1.5px solid var(--line);border-radius:18px;padding:36px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.contact ul{list-style:none;padding:0;margin:0;color:var(--mute)}
+footer{padding:28px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}nav{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{display:block;width:38px;height:38px}
+
+/* Animasi */
+.hero h1,.hero p,.hero .cta{animation:rise .7s both}
+.hero p{animation-delay:.15s}.hero .cta{animation-delay:.3s}
+.btn{transition:transform .2s}.btn:hover{transform:translateY(-3px)}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.js .reveal.in{opacity:1;transform:none}
+.js .card.in{transition:transform .25s,border-color .2s}
+.js .card.in:hover{transform:translateY(-6px);border-color:var(--pink)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+
+/* Filter harga */
+.prices{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip{font:700 16px "DM Sans",sans-serif;padding:12px 22px;border-radius:999px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.chip:hover{border-color:var(--pink);transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--pink);color:var(--onpink);border-color:var(--pink)}
+.empty{color:var(--mute);margin:0}
+.card.pop{animation:rise .5s both}
+.card small.ff{color:var(--amber)}
+.card .btn{margin-top:14px;padding:10px 18px;font-size:15px}
+
+/* Form stok */
+.finder{background:var(--panel);border:1.5px solid var(--line);border-radius:18px;padding:28px;box-shadow:8px 8px 0 var(--pink)}
+.finder h2{font-size:28px;margin-bottom:8px}
+.finder p{color:var(--mute);margin:0 0 18px;font-size:16px}
+.finder fieldset{border:0;padding:0;margin:0 0 20px}
+.finder legend{font-weight:700;margin-bottom:10px;padding:0}
+.finder .prices{margin-bottom:0}
+.finder .btn{width:100%;cursor:pointer;font:700 17px "DM Sans",sans-serif}
+.finder .err{color:var(--pink);margin:12px 0 0;min-height:1.2em}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip:has(input:checked){background:var(--pink);color:var(--onpink);border-color:var(--pink)}
+.chip:has(input:focus-visible){outline:3px solid var(--amber);outline-offset:3px}
+
+/* Foto akun dan info hasil */
+.hasil-info{font-weight:700;color:var(--pink);margin:0 0 16px;min-height:1.4em}
+.hasil-info:focus{outline:none}
+.fotobtn{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;margin-bottom:12px;position:relative}
+.foto{display:block;width:100%;height:200px;object-fit:cover;object-position:top;border-radius:10px;border:1px solid var(--line)}
+.fotobtn span{position:absolute;left:8px;bottom:8px;background:var(--amber);color:#1a0a14;font:700 12px "DM Sans",sans-serif;padding:3px 9px;border-radius:6px}
+dialog{border:0;padding:0;background:transparent;width:min(92vw,520px)}
+dialog::backdrop{background:rgba(0,0,0,.78)}
+dialog img{display:block;width:100%;max-height:90vh;object-fit:contain;border-radius:12px;cursor:zoom-out}
+
+.contact li a{color:var(--ink);font-weight:700;text-underline-offset:3px}
+.contact li a:hover{color:var(--pink)}
